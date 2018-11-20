@@ -58,7 +58,7 @@
 
  puts "10 blog posts created"
 
- 5.times { |skill| Skill.create!( title: "Dummy Skill #{skill}", percent_utilized: 15 ) }
+ 5.times { |skill| Skill.create!( title: "Dummy Skill #{skill + 1}", percent_utilized: rand(50..90) ) }
 
 puts "5 skills created"
 
