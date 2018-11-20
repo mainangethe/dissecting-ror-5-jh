@@ -5,6 +5,6 @@
 	<p> <%= individual_portfolio.title %> </p>
 	<p> <%= individual_portfolio.subtitle %> </p>
 	<p> <%= individual_portfolio.body %> </p>
-	<%= image_tag individual_portfolio.thumb_image %>
+	<%= image_tag individual_portfolio.thumb_image unless individual_portfolio.thumb_image.nil? %>
 
 <% end %>
