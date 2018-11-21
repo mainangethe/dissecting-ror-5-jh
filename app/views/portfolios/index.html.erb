@@ -9,5 +9,6 @@
 	<p> <%= individual_portfolio.body %> </p>
 	<%= image_tag individual_portfolio.thumb_image unless individual_portfolio.thumb_image.nil? %>
 	<%= link_to "Edit", edit_portfolio_path(individual_portfolio.id) %>
+	<%= link_to "Delete This" , portfolio_path(individual_portfolio), method: :delete, data: { confirm: "Are you sure?" } %>
 
 <% end %>
