@@ -132,8 +132,8 @@ end
 						Sed sed sapien rhoncus, placerat nulla non, tristique ligula.
 						Cras ultrices vestibulum diam at suscipit. Mauris fringilla tellus nisl, nec convallis ante fermentum at.
 						",
-		main_image: 	"http://placehold.it/600x400?text=Portfolio+Main+Image+#{portfolio_item + 1}",
-		thumb_image: 	"http://placehold.it/350x200?text=Portfolio+Thumb+Image+#{portfolio_item + 1}",
+		main_image: 	"http://placehold.it/600x400",
+		thumb_image: 	"http://placehold.it/350x200",
 	)
 	
 end
