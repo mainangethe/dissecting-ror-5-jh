@@ -142,7 +142,7 @@ puts "9 skills created(6-Ror, 3-Angular)"
 # generate 3 dummy technologies for each portfolio
 Portfolio.all.each do |portfolio|
 	tech_count = 3
-	tech_count.times { portfolio.technologies.create!(name: "Techonology #{portfolio.id + 1}") }
+	tech_count.times { |index| portfolio.technologies.create!(name: "Techonology #{index + 1}") }
 end
 
 puts "#{Portfolio.all.length * 3} technologies created."
