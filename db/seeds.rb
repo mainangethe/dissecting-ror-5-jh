@@ -7,6 +7,17 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
+# Let's create 3 topics
+topic_count = 3
+topic_count.times do |topic|
+	Topic.create!(
+		title: "Topic #{topic}"
+	)
+	
+end
+
+puts "#{topic_count} Topics created"
+
  # We want to create a seed that will allow us to create many posts at once
  10.times do |blog|
 
@@ -50,22 +61,23 @@
 	 			In orci nunc, laoreet quis dui a, imperdiet efficitur ante. 
 	 			In pellentesque aliquet nisl at pulvinar. 
 	 			Fusce a erat neque.
-				"
+				",
+		topic_id: Topic.last.id
  	)
 
 
  end
 
- puts "10 blog posts created"
+ puts "10 blog posts created for the last topic"
 
  5.times { |skill| Skill.create!( title: "Dummy Skill #{skill + 1}", percent_utilized: rand(50..90) ) }
 
 puts "5 skills created"
 
-9.times do |portfolio_item|
+6.times do |portfolio_item|
 	Portfolio.create!(
 		title: 			"Portfolio title: #{portfolio_item + 1}",
-		subtitle: 		"Dummy Service Provided",
+		subtitle: 		"Ruby on Rails",
 		body:
 						"
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
@@ -94,5 +106,36 @@ puts "5 skills created"
 	
 end
 
-puts "9 skills created"
+3.times do |portfolio_item|
+	Portfolio.create!(
+		title: 			"Portfolio title: #{portfolio_item + 1}",
+		subtitle: 		"Angular",
+		body:
+						"
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+						Praesent nec tincidunt ex. 
+						Nullam pharetra sapien eu ipsum efficitur lobortis. 
+						Vestibulum aliquam, lacus at pharetra congue, justo nulla mattis orci, ac laoreet mauris nibh quis lectus. 
+						Quisque bibendum justo urna, in facilisis ipsum vehicula et. 
+						Fusce fermentum pellentesque sapien in pellentesque. 
+						Praesent nec malesuada nunc. 
+						Vivamus ex arcu, placerat non nisl mollis, fringilla lobortis leo.
+
+						Quisque vestibulum ante sit amet eros congue congue. 
+						In hac habitasse platea dictumst. 
+						Ut at tortor non risus aliquam interdum id id purus. 
+						Cras molestie lacinia efficitur. Donec a ante imperdiet, pharetra mauris vitae, pellentesque diam. 
+						Quisque porta arcu odio, sit amet fringilla nibh tristique non. 
+						Donec sagittis nunc non felis volutpat accumsan. 
+						Aenean tellus sem, molestie a mollis ut, interdum et ex. 
+						Aenean nisi nisl, accumsan non ante eu, tempus posuere sapien. 
+						Sed sed sapien rhoncus, placerat nulla non, tristique ligula.
+						Cras ultrices vestibulum diam at suscipit. Mauris fringilla tellus nisl, nec convallis ante fermentum at.
+						",
+		main_image: 	"http://placehold.it/600x400?text=Portfolio+Main+Image+#{portfolio_item + 1}",
+		thumb_image: 	"http://placehold.it/350x200?text=Portfolio+Thumb+Image+#{portfolio_item + 1}",
+	)
+	
+end
+puts "9 skills created(6-Ror, 3-Angular)"
 
