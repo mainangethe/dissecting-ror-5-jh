@@ -17,7 +17,7 @@ class PortfoliosController < ApplicationController
 	end
 
 	def create
-    @portfolio_item = Portfolio.new(params.require( :portfolio ).permit( :title, :subtitle, :body, technologies_attributes: [ :name ] ) )
+    @portfolio_item = Portfolio.new(portfolio_params)
 
     respond_to do |format|
       if @portfolio_item.save
@@ -39,8 +39,8 @@ class PortfoliosController < ApplicationController
   	@portfolio_item = Portfolio.find(params[:id])
 
   	respond_to do |format|
-      if @portfolio_item.update(params.require(:portfolio).permit(:title, :subtitle, :body) )
-        format.html { redirect_to portfolios_path, notice: 'Your Portoflio #{:title} has been updated.' }  
+      if @portfolio_item.update(portfolio_params)
+        format.html { redirect_to portfolios_path, notice: 'Your Portoflio has been updated.' }  
       else
         format.html { render :edit }
       end
@@ -59,6 +59,16 @@ class PortfoliosController < ApplicationController
   	respond_to do |format|
   		format.html { redirect_to portfolios_path, notice: 'Your portfolio has been removed'}
   	end
+  end
+
+  private
+
+  def portfolio_params
+    params.require( :portfolio ).permit(  :title, 
+                                          :subtitle, 
+                                          :body, 
+                                          technologies_attributes: [:name] 
+                                        )
   end
 
 
