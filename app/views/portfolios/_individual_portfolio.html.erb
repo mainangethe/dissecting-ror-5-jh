@@ -5,6 +5,6 @@
 
 <%= image_tag individual_portfolio.thumb_image unless individual_portfolio.thumb_image.nil? %>
 
-<%= link_to "Edit", edit_portfolio_path(individual_portfolio.id) %>
+<%= link_to "Edit", edit_portfolio_path(individual_portfolio.id)  if logged_in?(:site_admin) %>
 <%= link_to "Delete This" , portfolio_path(individual_portfolio), 
-	method: :delete, data: { confirm: "Are you sure?" } %>
+	method: :delete, data: { confirm: "Are you sure?" }  if logged_in?(:site_admin) %>

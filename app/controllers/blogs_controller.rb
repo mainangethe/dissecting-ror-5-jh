@@ -1,6 +1,7 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy, :toggle_status]
   layout "blog"
+  access all: [:show, :index], user: {except: [:destroy, :new, :create, :update, :edit]}, site_admin: :all
 
   # GET /blogs
   # GET /blogs.json
@@ -33,7 +34,7 @@ class BlogsController < ApplicationController
 
     respond_to do |format|
       if @blog.save
-        format.html { redirect_to @blog, notice: 'Your blog has been published.' }
+        format.html { redirect_to @blog, notice: 'Your post has been published.' }
         format.json { render :show, status: :created, location: @blog }
       else
         format.html { render :new }
@@ -47,7 +48,7 @@ class BlogsController < ApplicationController
   def update
     respond_to do |format|
       if @blog.update(blog_params)
-        format.html { redirect_to @blog, notice: 'Your blog #{:title} has been updated.' }
+        format.html { redirect_to @blog, notice: 'Your post has been updated.' }
         format.json { render :show, status: :ok, location: @blog }
       else
         format.html { render :edit }
@@ -61,7 +62,7 @@ class BlogsController < ApplicationController
   def destroy
     @blog.destroy
     respond_to do |format|
-      format.html { redirect_to blogs_url, notice: 'Your blog has been removed.' }
+      format.html { redirect_to blogs_url, notice: 'Your post has been removed.' }
       format.json { head :no_content }
     end
   end
