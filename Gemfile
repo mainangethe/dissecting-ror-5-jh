@@ -69,3 +69,6 @@ gem 'jquery-rails'
 
 #Custom Gem - MradiViewTool - Copyrights
 gem 'mradi_view_tool', '~> 0.2.0'
+
+#Authorization Gem
+gem 'petergate', '~> 2.0', '>= 2.0.1'
