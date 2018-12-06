@@ -1,15 +1,17 @@
 <main role="main" class="inner cover">
-    <h1 class="cover-heading">Hi <%= current_user.first_name %></h1>
-    <p class="lead">Find me in app/views/pages/home.html.erb</p>
+    <h1 class="cover-heading">Welcome <%= current_user.first_name %></h1>
+    <p class="lead">Software development should not be a secret process, when we take on a new project, we make it our goal to
+    not only deliver a well crafted product but to also ensure that each stage of the process is fully communicated.</p>
     
-    <h2>Blog Posts</h2>
-		<%= @posts.inspect %>
-
-	<h2>Skills</h2>
-		<%= @skills.inspect %>
     <p class="lead">
     	<%= link_to 'All about Mradi', about_us_path, class: 'btn btn-lg btn-secondary' %>
     </p>
+    <!--<h2>Blog Posts</h2>
+		<%= @posts.inspect %>
+
+	<h2>Skills</h2>
+		<%= @skills.inspect %> -->
+    
 </main>
 
 
