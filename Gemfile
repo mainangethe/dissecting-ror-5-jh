@@ -60,3 +60,9 @@ gem 'friendly_id', '~> 5.2.0' # Note: You MUST use 5.0.0 or greater for Rails 4.
 
 # Authentication Gem
 gem 'devise', '~> 4.5'
+
+#Bootstrap 4 Gem
+gem 'bootstrap', '~> 4.1.3'
+
+#Bootstrap JS Dependency
+gem 'jquery-rails'
