@@ -66,3 +66,6 @@ gem 'bootstrap', '~> 4.1.3'
 
 #Bootstrap JS Dependency
 gem 'jquery-rails'
+
+#Custom Gem - MradiViewTool - Copyrights
+gem 'mradi_view_tool', git: 'https://github.com/mainangethe/mradi_view_tool'

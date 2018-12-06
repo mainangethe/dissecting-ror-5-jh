@@ -16,4 +16,8 @@ module ApplicationHelper
 			content_tag(:p, greeting, class: "session-source-greeting")
 		end
 	end
+
+	def copyright_generator_helper
+		MradiViewTool::Renderer.copyright('Mradi Kenya Limited', 'All rights reserved')
+	end
 end
