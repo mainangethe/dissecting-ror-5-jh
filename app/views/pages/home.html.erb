@@ -1,8 +1,15 @@
-<h1>Hi <%= current_user.first_name %></h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<main role="main" class="inner cover">
+    <h1 class="cover-heading">Hi <%= current_user.first_name %></h1>
+    <p class="lead">Find me in app/views/pages/home.html.erb</p>
+    
+    <h2>Blog Posts</h2>
+		<%= @posts.inspect %>
 
-<h1>Blog Posts</h1>
-<%= @posts.inspect %>
+	<h2>Skills</h2>
+		<%= @skills.inspect %>
+    <p class="lead">
+    	<a href="#" class="btn btn-lg btn-secondary">Learn more</a>
+    </p>
+</main>
 
-<h1>Skills</h1>
-<%= @skills.inspect %>
+
