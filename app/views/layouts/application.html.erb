@@ -4,25 +4,57 @@
     <title> <%= @page_title %> </title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name = "keywords" content = "<%= @seo_keywords %>" />
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body class="text-center">
 
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    
-    <%= render "shared/nav", nav_location: 'top' %>
-    
-    <%= login_helper %>
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+      <header class="masthead mb-auto">
+        <div class="inner">
+          <h3 class="masthead-brand">Mradi Portfolio</h3>
+          <nav class="nav nav-masthead justify-content-center">
+            <a class="nav-link active" href="#">Home</a>
+            <a class="nav-link" href="#">Features</a>
+            <a class="nav-link" href="#">Contact</a>
+            <%= render "shared/nav", nav_location: 'top' %>
+            <%= login_helper %>
 
-    <%= yield %>
+          </nav>
+        </div>
+      </header>
 
-    <p> <%= copyright_generator_helper %> </p>
+      <main role="main" class="inner cover">
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
+
+        <h1 class="cover-heading">Cover your page.</h1>
+        <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
+        <p class="lead">
+          <a href="#" class="btn btn-lg btn-secondary">Learn more</a>
+        </p>
+        <%= yield %>
+
+   
 
     <%= session_source_helper %>
+      </main>
+
+      <footer class="mastfoot mt-auto">
+        <div class="inner">
+           <p> <%= copyright_generator_helper %> </p>
+        </div>
+      </footer>
+    </div>
+
+    
+    
+   
+    
 
   </body>
 </html>
