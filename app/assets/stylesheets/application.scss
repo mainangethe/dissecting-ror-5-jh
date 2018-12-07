@@ -119,3 +119,16 @@ body {
  .form-group {
     text-align: left;
  }
+
+ 
+.secondary-col {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  
+}
+ .secondary-col a {
+    font-weight: 400;
+    color: #007bff;
+    background-color: transparent;
+ }
