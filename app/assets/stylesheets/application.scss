@@ -132,3 +132,22 @@ body {
     color: #007bff;
     background-color: transparent;
  }
+
+ .login > .card {
+    width: 35rem;
+    margin: 0 auto;
+    float: none;
+ }
+
+#error_explanation {
+    color: red;
+    text-align: left;
+ }
+
+ #error_explanation h2 {
+    font-size: 16px;
+ }
+
+  #error_explanation li {
+    font-size: 12px;
+ }
