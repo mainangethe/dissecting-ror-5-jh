@@ -72,3 +72,9 @@ gem 'mradi_view_tool', '~> 0.2.0'
 
 #Authorization Gem
 gem 'petergate', '~> 2.0', '>= 2.0.1'
+
+#Font Awesome
+gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.4'
+
+#pagination gem
+gem 'kaminari', '~> 0.17.0'
