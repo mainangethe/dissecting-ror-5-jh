@@ -1,0 +1,11 @@
+<section class="jumbotron text-center">
+  <div class="container">
+    <h1 class="jumbotron-heading"><em>Be Authentic!</em></h1>
+    <p class="lead text-muted">We live and breathe awesome work. Our greatest joy is a happy client saying "Thank You!" as they
+    look at our output and can't believe it's there's. And that is our inspiration.</p>
+    <p>
+      <a href="/hire-us" class="btn btn-primary my-2">Start a Project</a>
+      <%= link_to "Create New Portfolio", new_portfolio_path, class: "btn btn-secondary my-2"  if logged_in?(:site_admin) %>
+    </p>
+  </div>
+</section>

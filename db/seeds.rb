@@ -48,7 +48,7 @@ puts "5 skills created"
 		subtitle: 		"Ruby on Rails",
 		body:			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nec tincidunt ex. Nullam pharetra sapien eu ipsum efficitur lobortis. Vestibulum aliquam, lacus at pharetra congue, justo nulla mattis orci, ac laoreet mauris nibh quis lectus. ",
 		main_image: 	"http://placehold.it/600x400",
-		thumb_image: 	"http://placehold.it/350x200",
+		thumb_image: 	"http://placehold.it/356x280",
 	)
 	
 end
@@ -59,7 +59,7 @@ end
 		subtitle: 		"Angular",
 		body:			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nec tincidunt ex. Nullam pharetra sapien eu ipsum efficitur lobortis.",
 		main_image: 	"http://placehold.it/600x400",
-		thumb_image: 	"http://placehold.it/350x200",
+		thumb_image: 	"http://placehold.it/356x280",
 	)
 	
 end
