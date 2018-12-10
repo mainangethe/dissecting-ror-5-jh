@@ -1,12 +1,36 @@
-<%=image_tag @portfolio_item.main_image unless @portfolio_item.main_image.nil? %>
+<article>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-7">
+				<%=image_tag @portfolio_item.main_image unless @portfolio_item.main_image.nil? %>		
+			</div>
+			<div class="col-md-5">
+				<section>
+					<h1><%= @portfolio_item.title %></h1>
+					<em><%= @portfolio_item.subtitle %></em>
+				</section>
 
-<h1><%= @portfolio_item.title %></h1>
+				<section>
+					<p><%= @portfolio_item.body %></p>
+				</section>
 
-<em><%= @portfolio_item.subtitle %></em>
+				<section>
+					<h3> Technologies Used: </h3>
+					<% @portfolio_item.technologies.each do |technology| %>
+						<p> <%= technology.name %> </p>
+					<% end %>
+				</section>
+			</div>
 
-<p><%= @portfolio_item.body %></p>
+		</div>
+	</div>
+</article>
 
-<h2> Technologies Used: </h2>
-<% @portfolio_item.technologies.each do |technology| %>
-	<p> <%= technology.name %> </p>
-<% end %>
+	
+
+
+
+
+
+
+
