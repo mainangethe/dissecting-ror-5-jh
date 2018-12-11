@@ -6,8 +6,8 @@ class PortfoliosController < ApplicationController
   #call unique layout
   layout "portfolio"
 
-  access  all: [:show, :index, :angular, :rails], 
-          user: {except: [:destroy, :new, :create, :update, :edit]}, 
+  access  all: [:show, :index, :angular, :rails ], 
+          user: {except: [:destroy, :new, :create, :update, :edit, :sort ]}, 
           site_admin: :all
   
 	def index
