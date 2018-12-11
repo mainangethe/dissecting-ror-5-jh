@@ -3,9 +3,34 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 ready = undefined
+set_positions = undefined
+
+set_positions = ->
+	$( '.card' ).each (index) ->
+		$( this ).attr 'data-position', index + 1
+		return
+	return
 
 ready = ->
-	$('.sortable').sortable()
+	set_positions()
+	$( '.sortable' ).sortable()
+	$( '.sortable' ).sortable().bind 'sortupdate', (element, ui) ->
+		updated_order = []
+		set_positions() 
+		$( '.card' ).each (index) ->
+			updated_order.push
+				id: $( this ).data( 'id' )
+				position: index + 1
+			return
+
+		$.ajax
+			type: 'PUT'
+			url: '/portfolios/sort'
+			data: order: updated_order
+		return
+
 	return
+
+
 
 $( document ).ready ready
