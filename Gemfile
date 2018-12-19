@@ -81,3 +81,11 @@ gem 'kaminari', '~> 0.17.0'
 
 #jquery ui gem
 gem 'jquery-ui-rails', '~> 6.0', '>= 6.0.1'
+
+#image management gems
+gem 'carrierwave', '~> 1.2', '>= 1.2.3'
+gem 'mini_magick', '~> 4.9', '>= 4.9.2'
+gem 'carrierwave-aws', '~> 1.3'
+
+#password management - production
+gem 'dotenv-rails', '~> 2.5'
