@@ -89,3 +89,6 @@ gem 'carrierwave-aws', '~> 1.3'
 
 #password management - production
 gem 'dotenv-rails', '~> 2.5'
+
+#aws-setup
+gem 'carrierwave-aws', '~> 1.3'
