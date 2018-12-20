@@ -63,7 +63,7 @@ end
 	)
 	
 end
-puts "9 skills created(6-Ror, 3-Angular)"
+puts "9 portfolio items created (6-Ror, 3-Angular)"
 
 # generate 3 dummy technologies for each portfolio
 Portfolio.all.each do |portfolio|
