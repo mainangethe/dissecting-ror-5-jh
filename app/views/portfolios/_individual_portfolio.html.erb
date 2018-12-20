@@ -2,7 +2,7 @@
 <div class="col-md-4">
 	<div class="card mb-4 shadow-sm" data-id="<%= individual_portfolio.id %>" >
     
-    	<%= image_tag individual_portfolio.thumb_image, class: "card-img-top" unless individual_portfolio.thumb_image.nil? %>
+    	<%= image_tag individual_portfolio.thumb_image.url, class: "card-img-top" %>
     
     	<div class="card-body">
      		<h3 class="card-title">
