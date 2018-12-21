@@ -92,3 +92,6 @@ gem 'dotenv-rails', '~> 2.5'
 
 #nested forms - uses jQuery
 gem 'cocoon', '~> 1.2', '>= 1.2.12'
+
+#notifications
+gem 'gritter', '~> 1.2'

@@ -1,5 +1,12 @@
 <%= form_for(@portfolio_item) do |form| %>
   <section>
+    <% if @portfolio_item.errors.any? %>
+    <% @portfolio_item.errors.full_messages.each do |error| %>
+        <%= js add_gritter(error, title: "Mradi Portfolio", sticky: false) %>
+      <% end %>    
+  <% end %>
+  </section>
+  <section>
     <div class="form-group">
       <%= form.label :title %>
       <%= form.text_field :title, class: 'form-control' %>
