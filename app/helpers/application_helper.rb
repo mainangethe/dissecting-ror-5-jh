@@ -62,4 +62,15 @@ module ApplicationHelper
 	def active?(path)
 		"active" if current_page?(path)
 	end
+
+	def alert_generator_helper(msg)
+		js add_gritter(msg, title: "Mradi Portfolio", sticky: false)	
+	end
+
+	def flash_alert_helper
+		alert = (flash[:alert] || flash[:notice] || flash[:error])
+		alert_generator_helper(alert)
+	end
+
+	
 end
