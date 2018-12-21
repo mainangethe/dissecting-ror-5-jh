@@ -19,18 +19,15 @@
 					<% @portfolio_item.technologies.each do |technology| %>
 						<p> <%= technology.name %> </p>
 					<% end %>
+
+					<% if logged_in?(:site_admin) %>
+						<div class="col-md-12">
+							<%= link_to "Edit Portfolio", edit_portfolio_path(@portfolio_item), class: 'btn btn-warning' %>
+						</div>
+					<% end %>
 				</section>
 			</div>
 
 		</div>
 	</div>
 </article>
-
-	
-
-
-
-
-
-
-
