@@ -1,0 +1,19 @@
+<div class="inner cover">
+	<h1 class="cover-heading"> Tech News </h1>
+
+	<section>
+		<div class="row">
+			<% @tweets.each do |tweet| %>
+					<div class="col-md-6">
+						
+							<article class="tech-news">
+								<div class="card">
+									<%= twitter_parser_helper(tweet) %>
+								</div>
+							</article>
+						
+					</div>
+			<% end %>
+		</div>
+	</section>
+</div>

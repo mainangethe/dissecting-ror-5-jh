@@ -42,7 +42,7 @@ body {
 }
 
 .cover-container {
-  max-width: 55em;
+  max-width: 60em;
 }
 
 
@@ -171,4 +171,18 @@ body {
     transform: translateX(-50%) translateY(-50%);
     background: image-url('tiny-home-bg-1920x1280.jpg') no-repeat;
     background-size: cover;
+ }
+
+ .tech-news {
+  color: #727171;
+  margin: 20px;
+ }
+
+ .tech-news a {
+  color: #0000FF;
+  text-decoration: underline;
+ }
+
+ .tech-news > .card {
+  padding: 30px;
  }
