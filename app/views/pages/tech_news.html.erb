@@ -5,13 +5,13 @@
 		<div class="row">
 			<% @tweets.each do |tweet| %>
 					<div class="col-md-6">
-						<div class="tech-news">
-							<article>
+						
+							<article class="tech-news">
 								<div class="card">
 									<%= twitter_parser_helper(tweet) %>
 								</div>
 							</article>
-						</div>
+						
 					</div>
 			<% end %>
 		</div>
