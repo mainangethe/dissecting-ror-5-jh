@@ -95,3 +95,6 @@ gem 'cocoon', '~> 1.2', '>= 1.2.12'
 
 #notifications
 gem 'gritter', '~> 1.2'
+
+#no-sql db
+gem 'redis', '~> 4.1'
