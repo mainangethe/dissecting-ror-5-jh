@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   
   get 'about-us', to: 'pages#about'
   get 'hire-us', to: 'pages#contact'
+  get 'tech-news', to: 'pages#tech_news' 
 
   resources :blogs do
   	member do
