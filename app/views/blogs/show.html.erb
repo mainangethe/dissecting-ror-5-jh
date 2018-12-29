@@ -1,16 +1,18 @@
 <div class="col-md-8 blog-main">
 	<h2><%= @blog.title %></h2>
-	<% if logged_in?(:site_admin) %>
-	<%= link_to 'Edit', edit_blog_path(@blog), class: 'badge badge-warning' %>
-
-	<%= link_to @blog.status, toggle_status_blog_path(@blog), class: 'badge badge-primary' %>
-	<% end %>
-	<p>
-		<%= @blog.topic.title %>
-	</p>
 	
+	<section class="admin-links">
+		<% if logged_in?(:site_admin) %>
+		<%= link_to 'Edit', edit_blog_path(@blog), class: 'badge badge-warning' %>
+
+		<%= link_to @blog.status, toggle_status_blog_path(@blog), class: 'badge badge-primary' %>
+		<% end %>
+	</section>
 	<p>
     	<%= @blog.body %>
+	</p>
+	<p class='badge badge-secondary'>
+		<%= @blog.topic.title %>
 	</p>
 
 	<%= render 'comments/comment_form' %>	
