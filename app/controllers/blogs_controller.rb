@@ -28,10 +28,7 @@ class BlogsController < ApplicationController
       @page_title = @blog.title
     else
       redirect_to blogs_path, notice: "You are not authorized to access this page"
-    end
-    
-    
-    
+    end  
   end
 
   # GET /blogs/new
