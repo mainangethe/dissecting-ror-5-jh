@@ -16,6 +16,12 @@ class Blog < ApplicationRecord
 	end
 
 	def self.latest_blog
-		last
+		published.last
 	end
+
+	def self.recent_first
+		order('created_at DESC')
+	end
+
+
 end
