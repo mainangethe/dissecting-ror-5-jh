@@ -9,11 +9,18 @@
 		<% end %>
 	</section>
 	<p>
-    	<%= @blog.body %>
+    	<%= markdown_helper(@blog.body) %>
 	</p>
 	<p class='badge badge-secondary'>
 		<%= @blog.topic.title %>
 	</p>
+
+	<% unless logged_in?(:site_admin) %>
+		<p class="comment-label">
+			Want to share your thoughts? 
+			<%= link_to 'Register to Comment', new_user_registration_path, class: 'btn btn-sm btn-outline-primary' %>
+		</p>
+	<% end %>
 
 	<%= render 'comments/comment_form' %>	
 	<div id="comments" data-blog-id="<%= @blog.id %>">

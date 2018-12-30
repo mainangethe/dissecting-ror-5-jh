@@ -101,3 +101,9 @@ gem 'redis', '~> 4.1'
 
 #twitter gem
 gem 'twitter', '~> 6.2'
+
+#markdown highlighting
+gem 'redcarpet', '~> 3.4'
+
+#code syntax highlighting
+gem 'coderay', '~> 1.1', '>= 1.1.2'

@@ -77,6 +77,5 @@ module ApplicationHelper
 		alert = (flash[:alert] || flash[:notice] || flash[:error])
 		alert_generator_helper(alert)
 	end
-
-	
+		
 end
