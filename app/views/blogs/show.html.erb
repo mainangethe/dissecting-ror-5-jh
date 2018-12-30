@@ -1,11 +1,13 @@
 <div class="col-md-8 blog-main">
 	<h2><%= @blog.title %></h2>
+
+	<section>
+		<%= render 'breadcrumbs' %>
+	</section>
 	
 	<section class="admin-links">
 		<% if logged_in?(:site_admin) %>
-		<%= link_to 'Edit', edit_blog_path(@blog), class: 'badge badge-warning' %>
-
-		<%= link_to @blog.status, toggle_status_blog_path(@blog), class: 'badge badge-primary' %>
+			<%= link_to @blog.status, toggle_status_blog_path(@blog), class: 'badge badge-primary' %>
 		<% end %>
 	</section>
 	<p>
