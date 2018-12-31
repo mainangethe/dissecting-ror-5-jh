@@ -38,11 +38,8 @@ module BlogsHelper
     markdown_to_html.render(text).html_safe
   end
 
-  def admin_links_helper
-    if ( logged_in?(:site_admin) )
-      return (link_to 'Edit', edit_blog_path(@blog), class: 'badge badge-warning') + 
-      (link_to @blog.status, toggle_status_blog_path(@blog), class: 'badge badge-primary')
-    end
+  def blog_status_helper(blog)
+    blog.draft? ? 'badge badge-secondary' : 'badge badge-primary'
   end
 
 end

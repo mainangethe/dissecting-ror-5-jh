@@ -5,10 +5,7 @@
     	<%= @blog.title %>
     <span>
 
-    <% if logged_in?(:site_admin) %>
-	    <span class="pull-right">
-	    	<%= link_to fa_icon('pencil-square-o'), edit_blog_path(@blog) %>
-	    	<%= link_to fa_icon('trash'), @blog, method: :delete, data: { confirm:  'Are you sure?' } %>
-	    </span>
-    <% end %>
+    <span class="pull-right">
+	    	<%= render partial: 'blogs/admin_actions', locals: {blogs: @blog} %>
+	</span>    
 </nav>
