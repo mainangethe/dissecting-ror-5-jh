@@ -8,9 +8,7 @@ module BlogsHelper
   		msg = "Want to share a thought? " + link + link_2
 
       content_tag(:h3, msg.html_safe, class: "pb-3 mb-4 font-italic border-bottom")	
-    else
-      link_2 = (link_to 'Blog Topics', topics_path, class: 'btn btn-link')
-  	end
+    end
 	end
 
   def gravatar_helper(user)

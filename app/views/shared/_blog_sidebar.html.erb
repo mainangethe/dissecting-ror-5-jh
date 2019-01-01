@@ -8,6 +8,11 @@
   </div>
   
   <div class="sidebar-module">
+    <%= session_source_helper("alert alert-primary") %>
+  </div>
+  
+
+  <div class="sidebar-module">
     <h4> Topics </h4>
     <% @side_bar_topics.each do |topic| %>
       <p> <%= link_to topic.title, topic_path(topic) %> </p>
@@ -24,4 +29,4 @@
       
     </ol>
   </div>
-  </aside>
+</aside>
