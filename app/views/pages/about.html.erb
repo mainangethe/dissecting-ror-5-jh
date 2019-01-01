@@ -6,6 +6,24 @@
 			<div class="col-md-4 about-image-holder">
 				<!-- <img src="https://www.mradi.co.ke/wp-content/uploads/2016/11/Mradi-Logo-156x210.png" alt="Logo for Mradi">-->
 				<%= image_tag "mradi-logo-300x300.png", width: 250, alt: "Logo for Mradi"%>
+				
+				<section class="skills">
+					<% @skills.each do |skill| %>
+						<div class="skill">
+							<h5> <%= skill.title %> </h5>
+							<div class="progress" style="height: 20px">
+							   <div 
+							  	class="progress-bar progress-bar-striped bg-danger progress-bar-animated" 
+							  	role="progressbar" 
+							  	aria-valuenow="<%= skill.percent_utilized %>" 
+							  	aria-valuemin="0" 
+							  	aria-valuemax="100" 
+							  	style="width: <%= skill.percent_utilized %>%"> <%= skill.percent_utilized %>	
+							  	</div>
+							</div>
+						</div>
+					<% end %>
+				</section>
 			</div>
 			
 			<div class="col-md-8">
