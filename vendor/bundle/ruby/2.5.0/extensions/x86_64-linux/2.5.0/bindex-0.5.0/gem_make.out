@@ -1,0 +1,15 @@
+current directory: /home/ngethe/projects/mradi_portfolio/vendor/bundle/ruby/2.5.0/gems/bindex-0.5.0/ext/bindex
+/home/ngethe/.rvm/rubies/ruby-2.5.1/bin/ruby -r ./siteconf20190101-19135-18vyqjy.rb extconf.rb
+creating Makefile
+
+current directory: /home/ngethe/projects/mradi_portfolio/vendor/bundle/ruby/2.5.0/gems/bindex-0.5.0/ext/bindex
+make "DESTDIR=" clean
+
+current directory: /home/ngethe/projects/mradi_portfolio/vendor/bundle/ruby/2.5.0/gems/bindex-0.5.0/ext/bindex
+make "DESTDIR="
+compiling cruby.c
+linking shared-object bindex/cruby.so
+
+current directory: /home/ngethe/projects/mradi_portfolio/vendor/bundle/ruby/2.5.0/gems/bindex-0.5.0/ext/bindex
+make "DESTDIR=" install
+/usr/bin/install -m 0755 cruby.so ./.gem.20190101-19135-1fxw9dz/bindex
