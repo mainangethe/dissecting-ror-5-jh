@@ -7,6 +7,30 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
+user_count = 2
+user_count.times do |user|
+	User.create!(
+		name: "Admin#{ user + 1 } User",
+		email: "admin#{ user + 1 }@mradi.co.ke",
+		password: 'password',
+		password_confirmation: 'password',
+		roles: "site_admin"
+	)	
+end
+
+puts "#{user_count} Admin Users created"
+
+user_count = 3
+user_count.times do |user|
+	User.create!(
+		name: "Normal#{ user + 1 } User",
+		email: "user#{ user + 1 }@mradi.co.ke",
+		password: 'password',
+		password_confirmation: 'password'
+	)	
+end
+
+puts "#{user_count} Normal Users created"
 # Let's create 3 topics
 topic_count = 3
 topic_count.times do |topic|
