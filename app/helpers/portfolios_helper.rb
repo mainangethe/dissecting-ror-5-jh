@@ -1,11 +1,11 @@
 module PortfoliosHelper
 	def image_generator(height:,width:)
-		"http://placehold.it/#{height}x#{width}"	
+		"http://placehold.it/#{ height }x#{ width }"	
 	end
 
 	def image_generator_with_text(height:, width:, placeholder:)
 		url = placeholder.downcase.gsub(" ", "+")
-		"http://placehold.it/#{height}x#{width}?text=#{url}"
+		"http://placehold.it/#{ height }x#{ width }?text=#{ url }"
 	end
 
 	def portfolio_image_helper(image, type)
@@ -14,11 +14,12 @@ module PortfoliosHelper
 			image
 		
 		elsif (type == 'thumb')
-			image_generator(height: '356', width: '280')
+			image = image_generator(height: '356', width: '280')
+			
 		
 		elsif (type == 'main')
-			image_generator(height: '600', width: '400')
-
+			image = image_generator(height: '600', width: '400')
+			
 		end
 	end
 

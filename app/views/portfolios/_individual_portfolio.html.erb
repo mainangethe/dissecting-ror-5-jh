@@ -1,9 +1,8 @@
 
 <div class="col-md-4">
 	<div class="card mb-4 shadow-sm" data-id="<%= individual_portfolio.id %>" >
-    
-    	<%= image_tag individual_portfolio.thumb_image.url, class: "card-img-top" %>
-    
+		<%= image_tag "#{ portfolio_image_helper(individual_portfolio.thumb_image, 'thumb') }", class: "card-img-top", width: "100%" %>
+
     	<div class="card-body">
      		<h3 class="card-title">
       			<%= link_to individual_portfolio.title, portfolio_show_path(individual_portfolio) %>

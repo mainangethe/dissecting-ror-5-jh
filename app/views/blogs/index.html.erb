@@ -1,4 +1,6 @@
-<%= render 'latest_post' %>
+<% unless logged_in?(:site_admin) %>
+	<%= render 'latest_post' %>
+<% end %>
 
 <div class="col-md-8 blog-main">
   <%= paginate @blogs %>

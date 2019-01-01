@@ -10,10 +10,11 @@ module ApplicationHelper
 		end
 	end
 
-	def session_source_helper
+	def session_source_helper(styles = "session-source-greeting")
 		if session[:source]
-			greeting = "Thank you for visiting us from #{session[:source]}"
-			content_tag(:p, greeting, class: "session-source-greeting")
+			greeting = "Thank you for visiting us from #{session[:source]},
+			Please feel free to #{ link_to 'contact us', hire_us_path, class: 'alert-link' } if you would like us to work together."
+			content_tag(:div, greeting.html_safe, class: styles, role: "alert")
 		end
 	end
 
@@ -77,6 +78,5 @@ module ApplicationHelper
 		alert = (flash[:alert] || flash[:notice] || flash[:error])
 		alert_generator_helper(alert)
 	end
-
-	
+		
 end

@@ -6,6 +6,18 @@
     <h4 class="font-italic">About</h4>
     <p class="mb-0">  <em>Mradi</em> means "Project" in Swahili language.</p>
   </div>
+  
+  <div class="sidebar-module">
+    <%= session_source_helper("alert alert-primary") %>
+  </div>
+  
+
+  <div class="sidebar-module">
+    <h4> Topics </h4>
+    <% @side_bar_topics.each do |topic| %>
+      <p> <%= link_to topic.title, topic_path(topic) %> </p>
+    <% end %>
+  </div>
 
   <div class="p-3">
     <h4 class="font-italic">Elsewhere</h4>
@@ -17,4 +29,4 @@
       
     </ol>
   </div>
-  </aside>
+</aside>

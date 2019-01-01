@@ -7,7 +7,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name = "keywords" content = "<%= @seo_keywords %>" />
+
+    <%= favicon_link_tag 'favicons/favicon.ico' %>
+    
     <%= stylesheet_link_tag    'portfolios', media: 'all', 'data-turbolinks-track': 'reload' %>
+    
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
@@ -18,6 +22,7 @@
     <main role="main">
 
       <%= render 'shared/portfolio_hero' unless logged_in?(:site_admin) %>
+      
 
      <%= yield %> 
 
@@ -25,7 +30,7 @@
 
     <%= render 'shared/portfolio_footer' %>
        
-    <%= session_source_helper %>
+    
     <%= flash_alert_helper %>
 
   </body>
