@@ -1,4 +1,4 @@
-<% unless logged_in?(:site_admin) %>
+<% unless logged_in?(:site_admin) || @blogs.nil? %>
 	<%= render 'latest_post' %>
 <% end %>
 
