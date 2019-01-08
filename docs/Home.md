@@ -9,5 +9,5 @@ It's purpose is to introduce a visitor to the site and it's main call to action 
 
 Structured by the application.html.erb and the home.hmtl.erb files.
 
-![Homepage Screenshot]('images/mradi-homepage-sections.png')
+![Homepage Screenshot](images/mradi-homepage-sections.png)
 
