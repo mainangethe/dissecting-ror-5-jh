@@ -1,4 +1,4 @@
-<% unless logged_in?(:site_admin) || published? == false %>
+<% unless logged_in?(:site_admin) || @latest_post.nil? %>
 	<%= render 'latest_post' %>
 <% end %>
 
